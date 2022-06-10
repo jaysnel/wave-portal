@@ -7,12 +7,12 @@ import "hardhat/console.sol";
 contract WavePortal {
     uint256 totalWaves;
 
-    event NewWave(address indexed from, unit256 timestamp, string message);
+    event NewWave(address indexed from, uint256 timestamp, string message);
 
     struct Wave {
         address waver;
         string message;
-        unit256 timestamp;
+        uint256 timestamp;
     }
 
     Wave[] waves;
@@ -23,7 +23,7 @@ contract WavePortal {
 
     function wave(string memory _message) public {
         totalWaves += 1;
-        console.log('%s has waved', msg.sender);
+        console.log('%s has waved', msg.sender, _message);
 
         waves.push(Wave(msg.sender, _message, block.timestamp));
 

@@ -13,3 +13,9 @@ npx hardhat node
 node scripts/sample-script.js
 npx hardhat help
 ```
+After updating contract, remember to:
+1. Deploy it again
+
+2. Update the contract address in the frontend
+
+3. Update the abi file in the frontend
