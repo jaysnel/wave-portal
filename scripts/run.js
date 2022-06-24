@@ -11,7 +11,7 @@ const main = async () => {
     console.log('Contract Balance before: ', hre.ethers.utils.formatEther(contractBalance));
     
     // Send Wave
-    let waveTxn = await waveContract.wave("Test Message! This must work! :)");
+    let waveTxn = await waveContract.wave("Test Message!", 'username007');
     await waveTxn.wait();
 
     
